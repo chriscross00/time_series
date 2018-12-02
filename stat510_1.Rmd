@@ -1,0 +1,32 @@
+---
+title: "stat510_1"
+author: "Christoper Chan"
+date: "December 1, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##1.1 Overview
+
+* AR(1) model: $x_{t} = \delta + \phi_{1}x_{t-1} + w_{t}$
+    + Same properties of linear regression
+
+
+##1.2 Sample ACF and Properities of AR(1) Model
+
+* Weakly stationary series requirements:
+    1. Mean $E(x_{t})$ is same for all _t_
+    2. Variance of $x_t$ is same for all _t_
+    3. Corvariance and correlation between $x_t$ and $x_{t-h}$ is same for all _t_
+* Autocorrelation function (ACF) = gives correlation between $x_t$ and $x_{t-h}$ for $h = 1, 2...n$
+    + ACF = 
+    $$\frac{Cov(x_t, x_{t-h})}{s(x_t)s(x_t)} = \frac{Cov(x_t, x_{t-h})}{Var(x_t)}$$
+* Properties of AR(1) model:
+    + Mean($\mu$) = $\frac{\delta}{1-\phi_1}$
+    + Var($x_t$) = $\frac{\sigma^2_w}{1-\phi^2_1}$
+    + Cor($\rho_h$) = $\phi^2_1$
+
+
