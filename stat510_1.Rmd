@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ##1.3 Coded Examples
-```{r, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(forecast)
 ```
@@ -63,12 +63,6 @@ quakes_lag1 <- lag(my_quakes, 1)
 y = cbind(my_quakes, quakes_lag1)
 ar1_lr <- lm(y[,1]~y[,2])
 summary(ar1_lr)
-```
-
-
-
-```{r}
-print(y[,2])
 ```
 
 
