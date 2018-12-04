@@ -2,7 +2,7 @@
 title: "stat510_1"
 author: "Christoper Chan"
 date: "December 1, 2018"
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -38,9 +38,9 @@ library(forecast)
 ```
 
 ```{r}
-quakes <- scan('data/quakes.txt')
-head(quakes)
-quakes = ts(quakes)
+my_quakes <- scan('data/quakes.txt')
+head(my_quakes)
+quakes = ts(my_quakes)
 ```
 
 Honestly, I've looked around for ways to plot this in ggplot2 and I'm just not sure. Because there is no X component of dataset quakes, I'm not sure how 
@@ -49,7 +49,39 @@ plot(quakes, type='b')
 ```
 
 ```{r}
-lag.plot(quakes, 1)
+lag.plot(quakes, lags=1, do.lines=F)
 ```
+
+```{r}
+acf(quakes, xlim=c(1,20))
+```
+
+Regression of quakes$x and created variable of lag_1
+```{r}
+quakes_lag1 <- lag(my_quakes, 1)
+
+y = cbind(my_quakes, quakes_lag1)
+ar1_lr <- lm(y[,1]~y[,2])
+summary(ar1_lr)
+```
+
+
+
+```{r}
+print(y[,2])
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
