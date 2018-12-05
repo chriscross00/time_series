@@ -2,7 +2,7 @@
 title: "stat510_1"
 author: "Christoper Chan"
 date: "December 1, 2018"
-output: rmarkdown::github_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -22,8 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
     2. Variance of $x_t$ is same for all _t_
     3. Corvariance and correlation between $x_t$ and $x_{t-h}$ is same for all _t_
 * Autocorrelation function (ACF) = gives correlation between $x_t$ and $x_{t-h}$ for $h = 1, 2...n$
-    + ACF = 
-    $$\frac{Cov(x_t, x_{t-h})}{s(x_t)s(x_t)} = \frac{Cov(x_t, x_{t-h})}{Var(x_t)}$$
+    + ACF = $\frac{Cov(x_t, x_{t-h})}{s(x_t)s(x_t)} = \frac{Cov(x_t, x_{t-h})}{Var(x_t)}$
 * Properties of AR(1) model:
     + Mean($\mu$) = $\frac{\delta}{1-\phi_1}$
     + Var($x_t$) = $\frac{\sigma^2_w}{1-\phi^2_1}$
