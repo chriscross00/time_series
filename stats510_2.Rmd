@@ -17,4 +17,37 @@ knitr::opts_chunk$set(echo = TRUE)
         - $Var(x_t) = \sigma^2_w(1 + \theta^2_1)$
         - ACF = $$rho_1 = \frac{\theta_1}{1 + \theta^2_1}$$ and $\rho_h = 0$ for $h\geq2$
             * For MA(q): nonzero AC for first q lags and $AC = 0$ for $lags\legq$
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(zoo)
+```
             
+```{r}
+ma2 <- ARMAacf(ma=c(0.5, 0.3), lag.max=10)
+ma2
+```
+
+```{r}
+lags <- data.frame(0:10)
+s <- cbind(ma2, lags, make.row.names = T)
+print(s)
+ggplot(s, aes(lags, ma2)) +
+  geom_point() +
+  geom_line() +
+  ylab('r') +
+  ggtitle('ACF for MA(2) with theta1 = 0.5,theta2=0.3')
+
+```
+
+```{r}
+xc <- arima.sim(n=150, list(ma=c(0.5, 0.3)))
+x <- as_tibble(xc + 10)
+
+plot(x, type='b')
+```
+
+```{r}
+autoplot.zoo(x, geom = 'point') + geom_line()
+```
+
