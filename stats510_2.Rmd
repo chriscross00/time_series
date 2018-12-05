@@ -48,6 +48,13 @@ plot(x, type='b')
 ```
 
 ```{r}
-autoplot.zoo(x, geom = 'point') + geom_line()
+autoplot.zoo(x, geom = 'point') + 
+  geom_line() +
+  ylab('Time')
+  ggtitle('Simulated MA(2) Series')
+```
+
+```{r}
+acf(x, xlim = c(1,10), main = 'ACF for simulated MA(2) data')
 ```
 

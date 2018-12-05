@@ -72,9 +72,30 @@ plot(x, type='b')
 ![](stats510_2_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ``` r
-autoplot.zoo(x, geom = 'point') + geom_line()
+autoplot.zoo(x, geom = 'point') + 
+  geom_line() +
+  ylab('Time')
 ```
 
     ## Don't know how to automatically pick scale for object of type ts. Defaulting to continuous.
 
 ![](stats510_2_files/figure-markdown_github/unnamed-chunk-5-1.png)
+
+``` r
+  ggtitle('Simulated MA(2) Series')
+```
+
+    ## $title
+    ## [1] "Simulated MA(2) Series"
+    ## 
+    ## $subtitle
+    ## NULL
+    ## 
+    ## attr(,"class")
+    ## [1] "labels"
+
+``` r
+acf(x, xlim = c(1,10), main = 'ACF for simulated MA(2) data')
+```
+
+![](stats510_2_files/figure-markdown_github/unnamed-chunk-6-1.png)
