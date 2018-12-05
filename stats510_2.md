@@ -6,15 +6,17 @@ December 4, 2018
 2.1 Moving Average Models
 -------------------------
 
--   1st order MA(1) = *x*<sub>*t*</sub> = *μ* + *w*<sub>*t*</sub> + *θ*<sub>1</sub>*w*<sub>*t* − 1</sub>
-    -   qth order MA(*q*) = *x*<sub>*t*</sub> = *μ* + *w*<sub>*t*</sub> + *θ*<sub>1</sub>*w*<sub>*t* − 1</sub> + *θ*<sub>2</sub>*w*<sub>*t* − 2</sub> + ... + *θ*<sub>*q*</sub>*w*<sub>*t* − *q*</sub>
+-   1st order MA(1) = ![x\_t = \\mu + w\_t + \\theta\_{1}w\_{t-1}](https://latex.codecogs.com/png.latex?x_t%20%3D%20%5Cmu%20%2B%20w_t%20%2B%20%5Ctheta_%7B1%7Dw_%7Bt-1%7D "x_t = \mu + w_t + \theta_{1}w_{t-1}")
+    -   qth order MA(![q](https://latex.codecogs.com/png.latex?q "q")) = ![x\_t = \\mu + w\_t + \\theta\_{1}w\_{t-1} + \\theta\_{2}w\_{t-2} + ... + \\theta\_{q}w\_{t-q}](https://latex.codecogs.com/png.latex?x_t%20%3D%20%5Cmu%20%2B%20w_t%20%2B%20%5Ctheta_%7B1%7Dw_%7Bt-1%7D%20%2B%20%5Ctheta_%7B2%7Dw_%7Bt-2%7D%20%2B%20...%20%2B%20%5Ctheta_%7Bq%7Dw_%7Bt-q%7D "x_t = \mu + w_t + \theta_{1}w_{t-1} + \theta_{2}w_{t-2} + ... + \theta_{q}w_{t-q}")
     -   Properties:
-        -   Mean *E*(*x*<sub>*t*</sub>)=*μ*
-        -   *V**a**r*(*x*<sub>*t*</sub>)=*σ*<sub>*w*</sub><sup>2</sup>(1 + *θ*<sub>1</sub><sup>2</sup>)
+        -   Mean ![E(x\_t) = \\mu](https://latex.codecogs.com/png.latex?E%28x_t%29%20%3D%20%5Cmu "E(x_t) = \mu")
+        -   ![Var(x\_t) = \\sigma^2\_w(1 + \\theta^2\_1)](https://latex.codecogs.com/png.latex?Var%28x_t%29%20%3D%20%5Csigma%5E2_w%281%20%2B%20%5Ctheta%5E2_1%29 "Var(x_t) = \sigma^2_w(1 + \theta^2_1)")
         -   ACF =
-            $$rho\_1 = \\frac{\\theta\_1}{1 + \\theta^2\_1}$$
-             and *ρ*<sub>*h*</sub> = 0 for *h* ≥ 2
-            -   For MA(q): nonzero AC for first q lags and *A**C* = 0 for $lags\\legq$
+
+            ![rho\_1 = \\frac{\\theta\_1}{1 + \\theta^2\_1}](https://latex.codecogs.com/png.latex?rho_1%20%3D%20%5Cfrac%7B%5Ctheta_1%7D%7B1%20%2B%20%5Ctheta%5E2_1%7D "rho_1 = \frac{\theta_1}{1 + \theta^2_1}")
+
+             and ![\\rho\_h = 0](https://latex.codecogs.com/png.latex?%5Crho_h%20%3D%200 "\rho_h = 0") for ![h\\geq2](https://latex.codecogs.com/png.latex?h%5Cgeq2 "h\geq2")
+            -   For MA(q): nonzero AC for first q lags and ![AC = 0](https://latex.codecogs.com/png.latex?AC%20%3D%200 "AC = 0") for ![lags\\legq](https://latex.codecogs.com/png.latex?lags%5Clegq "lags\legq")
 
 ``` r
 library(tidyverse)
@@ -99,3 +101,8 @@ acf(x, xlim = c(1,10), main = 'ACF for simulated MA(2) data')
 ```
 
 ![](stats510_2_files/figure-markdown_github/unnamed-chunk-6-1.png)
+
+2.2 Partial Autocorrelation Function (PACF)
+-------------------------------------------
+
+-   qth order PACF = $$
