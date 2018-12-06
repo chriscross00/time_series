@@ -105,4 +105,11 @@ acf(x, xlim = c(1,10), main = 'ACF for simulated MA(2) data')
 2.2 Partial Autocorrelation Function (PACF)
 -------------------------------------------
 
--   qth order PACF = $$
+-   qth order PACF =
+
+    ![\\frac{Cov(x\_t, x\_{t-q}|x\_{t-1},... x\_{t-q-1})}{\\sqrt{Var(x\_t|x\_{t-1},... x\_{t-q-1})Var(x\_{t-q}|x\_{t-1},... x\_{t-q-1})}}](https://latex.codecogs.com/png.latex?%5Cfrac%7BCov%28x_t%2C%20x_%7Bt-q%7D%7Cx_%7Bt-1%7D%2C...%20x_%7Bt-q-1%7D%29%7D%7B%5Csqrt%7BVar%28x_t%7Cx_%7Bt-1%7D%2C...%20x_%7Bt-q-1%7D%29Var%28x_%7Bt-q%7D%7Cx_%7Bt-1%7D%2C...%20x_%7Bt-q-1%7D%29%7D%7D "\frac{Cov(x_t, x_{t-q}|x_{t-1},... x_{t-q-1})}{\sqrt{Var(x_t|x_{t-1},... x_{t-q-1})Var(x_{t-q}|x_{t-1},... x_{t-q-1})}}")
+
+    -   For AR model PACF is order of the model
+
+2.3 Notational conventions
+--------------------------

@@ -63,8 +63,10 @@ acf(x, xlim = c(1,10), main = 'ACF for simulated MA(2) data')
 
 
 ##2.2 Partial Autocorrelation Function (PACF)
-* qth order PACF = $$\frac{Cov(x_t, x_{t-q}|x_{t-1}...x_{t-q+1})}
+* qth order PACF = $$\frac{Cov(x_t, x_{t-q}|x_{t-1},... x_{t-q-1})}{\sqrt{Var(x_t|x_{t-1},... x_{t-q-1})Var(x_{t-q}|x_{t-1},... x_{t-q-1})}}$$
+    + For AR model PACF is order of the model
 
+##2.3 Notational conventions
 
 
 
