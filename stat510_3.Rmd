@@ -1,0 +1,27 @@
+---
+title: "stats510_3"
+author: "Christopher Chan"
+date: "December 9, 2018"
+output: 
+  rmarkdown::github_document:
+    pandoc_arg: --webtex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##3.1 Non-Seasonal Moving Average
+- ARIMA models(Box-Jekins models) = may contain AR terms, MA terms and/or differencing operations
+    * Specified in the order (AR order, differencing, MA order)
+        + ie (1, 2, 3) = AR(1), 2nd difference, MA(3)
+        
+
+
+
+
+```{r, warning=F, message=F}
+library(tidyverse)
+
+```
+
