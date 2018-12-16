@@ -18,9 +18,10 @@ knitr::opts_chunk$set(echo = TRUE)
         
 
 
+##3.2 Diagnostics
 
 
-```{r, warning=F, message=F}
+```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(forecast)
 library(tseries)
