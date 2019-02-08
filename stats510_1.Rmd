@@ -1,8 +1,10 @@
 ---
-title: "stat510_1"
+title: "stats510_1"
 author: "Christoper Chan"
 date: "December 1, 2018"
-output: github_document
+output: 
+  github_document:
+    pandoc_arg: --webtex
 ---
 
 ```{r setup, include=FALSE}

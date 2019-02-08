@@ -1,4 +1,4 @@
-stat510\_1
+stats510\_1
 ================
 Christoper Chan
 December 1, 2018
@@ -49,19 +49,19 @@ Honestly, I've looked around for ways to plot this in ggplot2 and I'm just not s
 plot(quakes, type='b')
 ```
 
-![](stat510_1_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](stats510_1_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ``` r
 lag.plot(quakes, lags=1, do.lines=F)
 ```
 
-![](stat510_1_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](stats510_1_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ``` r
 acf(quakes, xlim=c(1,20))
 ```
 
-![](stat510_1_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](stats510_1_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 Regression of quakes$x and created variable of lag\_1
 
