@@ -20,6 +20,8 @@ knitr::opts_chunk$set(echo = TRUE)
         - $Var(x_t) = \sigma^2_w(1 + \theta^2_1)$
         - ACF = $$rho_1 = \frac{\theta_1}{1 + \theta^2_1}$$ and $\rho_h = 0$ for $h\geq2$
             * For MA(q): nonzero AC for first q lags and $AC = 0$ for $lags\legq$
+            
+    + Shows $y_t$ correlated with $y_{t-1}$
 
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
